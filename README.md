@@ -25,9 +25,9 @@ $ sudo apt upgrade
 Download the latest Kernel [source code](https://cdn.kernel.org/pub/linux/kernel/v5.x/) with wget and extract it:
 ```
 $ cd /usr/src/
-$ sudo wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.16.3.tar.xz
-$ sudo tar xvf linux-5.16.3.tar.xz
-$ cd linux-5.16.3/
+$ sudo wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.16.5.tar.xz
+$ sudo tar xvf linux-5.16.5.tar.xz
+$ cd linux-5.16.5/
 ```
 
 Copy your current Kernel's configuration file (Debian stock Kernel config):
@@ -74,9 +74,9 @@ $ sudo make modules
 $ sudo make modules_install
 ```
 
-Strip unnecessary files to reduce the size of initrd and /lib/modules/5.16.3/ directory:
+Strip unnecessary files to reduce the size of initrd and /lib/modules/5.16.5/ directory:
 ```
-$ sudo find /lib/modules/5.16.3/ -name *.ko -exec strip --strip-unneeded {} +
+$ sudo find /lib/modules/5.16.5/ -name *.ko -exec strip --strip-unneeded {} +
 ```
 
 Next, install the compiled Kernel:
@@ -84,11 +84,11 @@ Next, install the compiled Kernel:
 $ sudo make install
 ```
 
-The command will install the files below in the /boot/ directory.
+The command will install the files below in the /boot/ directory:
 ```
-vmlinuz-5.16.3
-initramfs-5.16.3.img
-System.map-5.16.3
+vmlinuz-5.16.5
+initramfs-5.16.5.img
+System.map-5.16.5
 ```
 
 Optional, configure GRUB to remeber the last Kernel selected. Open `/etc/default/grub` and put the following in:
