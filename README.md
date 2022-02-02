@@ -62,7 +62,7 @@ Warning: if you need only currently loaded modules (drivers) then you can compil
 $ sudo make localmodconfig
 ```
 
-Now compile the Kernel:
+Now compile the Kernel (this will take some time, you can speed it up by using multiple cores with -j flag, for example `make -j8` to use 8 cores):
 ```
 $ sudo make clean
 $ sudo make bzImage
