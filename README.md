@@ -74,10 +74,9 @@ $ sudo make modules
 $ sudo make modules_install
 ```
 
-Strip unnecessary files to reduce the size of initrd and /lib/modules/5.16.3/ directory (be careful here, cd into the right folder):
+Strip unnecessary files to reduce the size of initrd and /lib/modules/5.16.3/ directory:
 ```
-$ cd /lib/modules/5.16.3/
-$ sudo find . -name *.ko -exec strip --strip-unneeded {} +
+$ sudo find /lib/modules/5.16.3/ -name *.ko -exec strip --strip-unneeded {} +
 ```
 
 Next, install the compiled Kernel:
