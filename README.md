@@ -22,6 +22,17 @@ $ sudo apt install wget build-essential dwarves python3 libncurses-dev flex biso
 $ sudo apt upgrade
 ```
 
+Download official firmware for Realtek 8852AE
+```
+$ sudo mkdir /lib/firmware/rtl_bt/
+$ cd /lib/firmware/rtl_bt
+$ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtl_bt/rtl8852au_config.bin
+$ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtl_bt/rtl8852au_fw.bin
+$ sudo mkdir /lib/firmware/rtw89/
+$ cd /lib/firmware/rtw89
+$ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtw89/rtw8852a_fw.bin
+```
+
 Download the latest Kernel [source code](https://cdn.kernel.org/pub/linux/kernel/v5.x/) with wget and extract it:
 ```
 $ cd /usr/src/
@@ -77,17 +88,6 @@ $ sudo find /lib/modules/5.16.5/ -name *.ko -exec strip --strip-unneeded {} +
 Next, install the compiled Kernel:
 ```
 $ sudo make install
-```
-
-Download official firmware for Realtek 8852AE
-```
-$ sudo mkdir /lib/firmware/rtl_bt/
-$ cd /lib/firmware/rtl_bt
-$ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtl_bt/rtl8852au_config.bin
-$ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtl_bt/rtl8852au_fw.bin
-$ sudo mkdir /lib/firmware/rtw89/
-$ cd /lib/firmware/rtw89
-$ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtw89/rtw8852a_fw.bin
 ```
 
 The command will install the files below in the /boot/ directory:
