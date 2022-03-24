@@ -57,11 +57,6 @@ Fix potential signing errors by setting this in your `.config` (or set your own 
 CONFIG_SYSTEM_TRUSTED_KEYS=""
 ```
 
-Warning: if you need only currently loaded modules (drivers) then you can compile much faster after running the command below. Make sure you attach all your devices like usb sticks, external keyboards, mouse etc. before doing this, or simply omit this step and compile all drivers that ships with the stock Debian.
-```
-$ sudo make localmodconfig
-```
-
 Now compile the Kernel (this will take some time, you can speed it up by using the `make` in parallel mode with -j flag, for example `make -j4` to use 4 cores):
 ```
 $ sudo make clean
