@@ -79,12 +79,14 @@ Next, install the compiled Kernel:
 $ sudo make install
 ```
 
-Download firmware (?)
+Download official firmware
 ```
-$ sudo mkdir /lib/firmware/rtl_bt/ && cd /lib/firmware/rtl_bt
+$ sudo mkdir /lib/firmware/rtl_bt/
+$ cd /lib/firmware/rtl_bt
 $ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtl_bt/rtl8852au_config.bin
 $ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtl_bt/rtl8852au_fw.bin
-$ sudo mkdir /lib/firmware/rtw89/ && cd /lib/firmware/rtw89
+$ sudo mkdir /lib/firmware/rtw89/
+$ cd /lib/firmware/rtw89
 $ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtw89/rtw8852a_fw.bin
 ```
 
