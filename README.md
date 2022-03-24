@@ -79,7 +79,7 @@ Next, install the compiled Kernel:
 $ sudo make install
 ```
 
-Download official firmware
+Download official firmware for Realtek 8852AE
 ```
 $ sudo mkdir /lib/firmware/rtl_bt/
 $ cd /lib/firmware/rtl_bt
