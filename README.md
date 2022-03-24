@@ -82,10 +82,10 @@ $ sudo make install
 Download firmware (?)
 ```
 $ sudo mkdir /lib/firmware/rtl_bt/ && cd /lib/firmware/rtl_bt
-$ sudo wget https://github.com/alcalbg/how-to-compile-linux-kernel/raw/main/firmware/rtl_bt/rtl8852au_config.bin
-$ sudo wget https://github.com/alcalbg/how-to-compile-linux-kernel/raw/main/firmware/rtl_bt/rtl8852au_fw.bin
+$ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtl_bt/rtl8852au_config.bin
+$ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtl_bt/rtl8852au_fw.bin
 $ sudo mkdir /lib/firmware/rtw89/ && cd /lib/firmware/rtw89
-$ sudo wget https://github.com/alcalbg/how-to-compile-linux-kernel/raw/main/firmware/rtw89/rtw8852a_fw.bin
+$ sudo wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/rtw89/rtw8852a_fw.bin
 ```
 
 The command will install the files below in the /boot/ directory:
